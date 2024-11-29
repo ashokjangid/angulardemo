@@ -21,13 +21,6 @@ jobs:
         with:
           node-version: '20.x'
 
-      - name: Clean npm cache and install
-        run: |
-          cd demo2
-          rm -rf node_modules
-          rm package-lock.json  # Optional: Only if you want to regenerate the lock file
-          npm install
-          
       - name: npm install, build, and test
         run: |
           cd demo2  # Change directory to where package.json is located
